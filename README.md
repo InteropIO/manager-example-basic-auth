@@ -65,7 +65,7 @@ This will add the Glue42 Server as an additional application store. If you want 
 This will also instruct Glue42 Enterprise to store Layouts and Application Preferences on the Glue42 Server.
 
 ### Use a custom login screen
-To enable the custom login screen, use the "ssoAuth" top-level key
+To enable the custom login screen, use the "ssoAuth" top-level key. You need to point the login screen to the **Admin UI** url and add the **gd** query parameter. The **gd** query parameter is used to indicate that the login comes from io.Connect Desktop login page.
 
 ```json
 {
@@ -80,21 +80,5 @@ To enable the custom login screen, use the "ssoAuth" top-level key
             }
         }
     }
-}
-```
-
-### Re-direct crashes to the server
-
-```json
-"crashReporter": {
-      "enabled": true,
-      "folderPath": "%GLUE-USER-DATA%/crashes",
-      "companyName": "Tick42",
-      "productName": "Glue42 Enterprise",
-      "ignoreSystemCrashHandler": false,
-      "output": {
-         "type": "server",
-         "serverUrl": "https://server-demos.glue42.com:4087/api/crashes"
-      }
 }
 ```
