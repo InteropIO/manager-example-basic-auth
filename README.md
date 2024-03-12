@@ -18,9 +18,9 @@ To generate an .npmrc file:
 * Copy the snippet.
 * Create an .npmrc file with the copied contents.
 
-### Prepare a running mongo instance
+### Setup MongoDB or other database
 
-Once you have a running mongodb instance change the **mongoURI** variable in **server/src/index.ts**
+io.Manager requires a database to connect to - this example depends on MongoDB, but you can use any other of the supported databases. You will need to either have a local instance or setup a remote database to connect to.
 
 ## How to run the server
 
