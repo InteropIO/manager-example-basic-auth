@@ -1,9 +1,8 @@
-import AdminUI, { BasicAuthProvider } from "@glue42/server-admin-ui";
+import AdminUI, { BasicAuthProvider, UserPassLogin } from "@glue42/server-admin-ui";
 import '@glue42/theme';
 import '@glue42/theme/dist/packages/rc-select.css';
 import "@glue42/server-admin-ui/dist/src/styles/index.css";
 import "@ag-grid-community/core/dist/styles/ag-grid.css";
-import { Login } from "./Login";
 import { Options } from "@glue42/server-api";
 import { useState } from "react";
 
@@ -20,7 +19,7 @@ function App() {
 
   if (!options) {
     return (
-      <Login url={serverBase} success={setOptions} />
+      <UserPassLogin url={serverBase} success={setOptions} />
     )
   }
   provider.setOptions(options);
