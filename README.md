@@ -64,12 +64,12 @@ To configure io.Connect Desktop to connect to the io.Manager Server, use the "se
 
 This will add the io.Manager Server as an additional application store. If you want the io.Manager Server to be the only app store, set the "appStores" top-level key to an empty array.
 
-This will also instruct Glue42 Enterprise to store Layouts and Application Preferences on the io.Manager Server.
+This will also instruct io.Connect Desktop to store Layouts and Application Preferences on the io.Manager Server.
 
 **Using a custom login screen**
 
 For basic authentication you can use the built in screen that comes as part of **Admin UI**.
-To enable the custom login screen, use the "ssoAuth" top-level key. You need to point the login screen to the **Admin UI** url and add the **gd** query parameter. The **gd** query parameter is used to indicate that the login comes from io.Connect Desktop login page.
+To enable it use the "ssoAuth" top-level key in **system.json**. You need to point the login screen to the **Admin UI** url and add the **gd** query parameter. The **gd** query parameter is used to indicate that the login comes from io.Connect Desktop login page.
 
 ```json
 {
